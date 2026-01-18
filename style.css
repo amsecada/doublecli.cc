@@ -1,0 +1,295 @@
+:root {
+  --color-bg: #050505;
+  --color-text-main: #e0e0e0;
+  --color-text-muted: #888888;
+  
+  /* Brand Accents */
+  --color-orange: #FF5F00; /* Safety Orange */
+  --color-magenta: #FF00CC; /* Hot Magenta */
+  
+  /* Layout / Shape */
+  --echo-offset: 6px;
+  --border-width: 2px;
+  
+  --font-main: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Utilities */
+.text-orange { color: var(--color-orange); }
+.text-magenta { color: var(--color-magenta); }
+.mono { font-family: var(--font-mono); }
+.hidden { display: none; }
+
+/* Double Echo Motif */
+.double-echo {
+  position: relative;
+  border: var(--border-width) solid var(--color-text-main);
+  background: var(--color-bg);
+  z-index: 10;
+}
+
+/* The echo shadow */
+.double-echo::after {
+  content: "";
+  position: absolute;
+  top: var(--echo-offset);
+  left: var(--echo-offset);
+  width: 100%;
+  height: 100%;
+  border: var(--border-width) solid var(--color-text-main); /* Fallback */
+  background: transparent;
+  z-index: -1;
+  pointer-events: none;
+  /* Alternating color logic could go here, but for simple MVP we might just use one color or specific classes */
+}
+
+.echo-orange { border-color: var(--color-orange); }
+.echo-orange::after { border-color: var(--color-orange); }
+
+.echo-magenta { border-color: var(--color-magenta); }
+.echo-magenta::after { border-color: var(--color-magenta); }
+
+/* Mixed: Orange Box, Magenta Echo */
+.echo-mixed { border-color: var(--color-orange); }
+.echo-mixed::after { border-color: var(--color-magenta); }
+
+/* Components */
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--color-bg);
+  /* Small echo for badge */
+  border: 1px solid var(--color-magenta);
+  box-shadow: 3px 3px 0 var(--color-magenta);
+  color: var(--color-magenta);
+  width: fit-content;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+/* Form */
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-bg);
+  border: 2px solid var(--color-text-muted);
+  color: var(--color-text-main);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--color-orange);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-orange);
+  color: #000;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--color-orange);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+/* Button with static echo for "clicky" feel */
+.btn-primary {
+  box-shadow: var(--echo-offset) var(--echo-offset) 0 var(--color-magenta);
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 var(--color-magenta);
+}
+
+/* Mission Brief */
+.mission-brief {
+  padding: 1.5rem;
+  background: #000;
+  border: 2px solid var(--color-text-muted);
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-bottom: 1px dashed var(--color-text-muted);
+  padding-bottom: 0.5rem;
+}
+
+.mission-content p {
+  margin-bottom: 1rem;
+}
+
+.mission-content li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mission-content li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--color-orange);
+  font-weight: bold;
+}
+
+/* Sections */
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--color-magenta);
+  margin-top: 0.25rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Details Lists */
+.details-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.details-list li::before {
+  position: absolute;
+  left: 0;
+}
+
+.for-list li::before {
+  content: "+";
+  color: var(--color-orange);
+  font-weight: bold;
+}
+
+.not-for-list li::before {
+  content: "x";
+  color: var(--color-text-muted); /* or red? sticking to palette */
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  display: none; /* simple toggle via JS or css target */
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid #222;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}

@@ -83,3 +83,5 @@ Choose one of these patterns (MVP-friendly):
   window.DOUBLECLI_CONFIG = {
     waitlistEndpoint: "https://your-provider-endpoint",
   };
+  ```
+
