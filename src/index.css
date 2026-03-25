@@ -149,6 +149,8 @@ body {
   color: var(--text-main);
 }
 .btn-book {
+  position: relative;
+  overflow: hidden;
   border-radius: 9999px;
   border: 1px solid rgba(251,146,60,0.25);
   background-color: rgba(251,146,60,0.1);
@@ -160,9 +162,45 @@ body {
   transition: background-color 0.2s ease, transform 0.2s ease;
   text-decoration: none;
 }
+.btn-book::after {
+  content: '';
+  position: absolute;
+  inset: -120% -35%;
+  transform: translateX(-180%) rotate(24deg);
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 38%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.02) 62%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: btn-book-shimmer 8.5s ease-in-out infinite;
+}
 .btn-book:hover {
   background-color: rgba(251,146,60,0.15);
   transform: translateY(-1px);
+}
+
+@keyframes btn-book-shimmer {
+  0%, 84%, 100% {
+    transform: translateX(-180%) rotate(24deg);
+    opacity: 0;
+  }
+  88% {
+    opacity: 0.85;
+  }
+  96% {
+    transform: translateX(180%) rotate(24deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-book::after {
+    animation: none;
+  }
 }
 
 /* Typography Utilities */
