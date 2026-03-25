@@ -1,30 +1,39 @@
 export default function Proof() {
   const proofItems = [
-    "Audit / teardown example",
-    "Revenue systems blueprint",
-    "Case study placeholder",
+    [
+      "Audit / Teardown Example",
+      "See how doublecli.cc identifies revenue leaks, process gaps, and missed follow-up opportunities inside a business."
+    ],
+    [
+      "Revenue Systems Blueprint",
+      "A look at how the right systems can turn messy sales and operations into a cleaner, more scalable growth engine."
+    ],
+    [
+      "Case Study Placeholder",
+      "Examples of how smarter systems, better sequencing, and AI-enabled automation can create measurable business upside."
+    ]
   ];
 
   return (
     <section className="proof-section content-container">
       <div className="proof-grid grid-2-uneven-reverse">
         <div className="proof-intro">
-          <div className="section-kicker">Proof / signal</div>
+          <div className="section-kicker"><span className="badge-dot" /> Proof / Signal</div>
           <h2 className="section-title text-white mt-4">
-            The trust-building block.
+            Proof, teardowns, and systems thinking.
           </h2>
           <p className="section-text mt-6">
-            This section can be case studies, teardowns, strategic essays, screenshots, or sample deliverables.
+            doublecli.cc builds trust by showing the work: strategic breakdowns, example audits, operating logic, and real-world thinking around lead handling, sales enablement, content systems, and AI-enabled workflow design.
           </p>
         </div>
         <div className="proof-cards grid-3">
-          {proofItems.map((item, idx) => (
+          {proofItems.map(([title, text], idx) => (
             <div key={idx} className="proof-card">
               <div className="proof-image-placeholder" />
               <div className="proof-card-content">
-                <h3 className="proof-card-title">{item}</h3>
+                <h3 className="proof-card-title">{title}</h3>
                 <p className="proof-card-text text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {text}
                 </p>
               </div>
             </div>

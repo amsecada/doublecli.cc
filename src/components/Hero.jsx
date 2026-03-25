@@ -4,13 +4,13 @@ export default function Hero() {
       <div className="hero-content">
         <div className="badge">
           <span className="badge-dot" />
-          Revenue Systems / Premium Operator
+          Revenue Systems / AI-Enabled Growth Infrastructure
         </div>
         <h1 className="hero-title">
-          Premium growth infrastructure for businesses tired of winging revenue.
+          Revenue systems for service businesses tired of winging growth.
         </h1>
         <p className="hero-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus.
+          doublecli.cc helps service businesses create more revenue by fixing broken lead handling, weak follow-up, manual processes, and operational bottlenecks with smarter systems and AI-enabled automation.
         </p>
         
         <div className="hero-actions">
@@ -47,7 +47,7 @@ export default function Hero() {
             <div className="snapshot-metrics">
               {[
                 ["Lead Intake", "82%"],
-                ["Follow-up", "43%"],
+                ["Follow-Up", "43%"],
                 ["Pipeline Clarity", "67%"],
                 ["Automation Readiness", "58%"],
               ].map(([label, value], i) => (
@@ -75,7 +75,7 @@ export default function Hero() {
               <div className="stat-box">
                 <div className="stat-label">Primary Leak</div>
                 <div className="stat-value">Inconsistent follow-up</div>
-                <div className="stat-desc">Lorem ipsum dolor sit amet</div>
+                <div className="stat-desc">Leads are coming in, but the system behind them is too manual and too inconsistent to convert efficiently.</div>
               </div>
             </div>
           </div>

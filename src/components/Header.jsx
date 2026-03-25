@@ -4,12 +4,13 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="logo-container">
+        <Link to="/" className="logo-container" style={{ textDecoration: 'none' }}>
           <div className="logo-dot" />
           <span className="logo-text">doublecli.cc</span>
-        </div>
+        </Link>
         <nav className="main-nav">
           <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
           <Link to="/solutions">Solutions</Link>
           <Link to="/case-studies">Case Studies</Link>
           <Link to="/resources">Resources</Link>

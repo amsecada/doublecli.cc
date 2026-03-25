@@ -1,8 +1,8 @@
 export default function Process() {
   const steps = [
-    ["01", "Strategy Call", "Clarify constraints, priorities, leaks, and upside."],
-    ["02", "Revenue Blueprint", "Map the systems, sequencing, and fastest wins."],
-    ["03", "Done-For-You Buildout", "Implement, refine, and maintain the operating layer."],
+    ["01", "Strategy Call", "We identify the bottlenecks, messy workflows, and revenue leaks that are creating friction inside the business."],
+    ["02", "Revenue Blueprint", "We prioritize the systems most likely to create measurable upside first, especially in lead handling, follow-up, sales support, and repeatable output."],
+    ["03", "Done-For-You Buildout", "We implement the workflows, automations, and operating layer needed to solve the problem, then support the system over time through ongoing improvement and monthly partnership."],
   ];
 
   return (
@@ -10,12 +10,12 @@ export default function Process() {
       <div className="process-container">
         <div className="process-grid grid-2-uneven">
           <div className="process-intro">
-            <div className="section-kicker text-orange">Process</div>
+            <div className="section-kicker text-orange"><span className="badge-dot" /> Process</div>
             <h2 className="section-title text-white mt-4">
               Strategy first. Build second. Revenue always.
             </h2>
             <p className="section-text mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.
+              doublecli.cc does not start with random tools or shiny demos. We start with the business problem, the revenue opportunity, and the process gaps that need to be fixed first.
             </p>
           </div>
           <div className="process-steps">
