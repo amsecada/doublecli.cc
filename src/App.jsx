@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyTemplate from './pages/CaseStudyTemplate';
+import CaseStudyKAR from './pages/CaseStudyKAR';
 import Resources from './pages/Resources';
 import BookCall from './pages/BookCall';
 import Products from './pages/Products';
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/restoring-trust-commercial-data-after-acquisition" element={<CaseStudyKAR />} />
         <Route path="/case-studies/template-atlas-home-services" element={<CaseStudyTemplate />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/book-call" element={<BookCall />} />

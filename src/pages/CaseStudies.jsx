@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const caseStudyCards = [
   {
-    title: 'Operations Whitepaper: Atlas Home Services',
+    title: 'Restoring Trust in Commercial Data After Acquisition',
     description:
-      'How one service team reworked intake, routing, and follow-up to turn lagging demand into reliable weekly revenue.',
-    href: '/case-studies/template-atlas-home-services',
-    metrics: ['Revenue +140%', 'Close Rate 2x'],
+      'A systems-led Salesforce consolidation that turned three fragmented legacy orgs into a governed foundation leadership could actually trust.',
+    href: '/case-studies/restoring-trust-commercial-data-after-acquisition',
+    metrics: ['3 Org → 1 Model', '80%+ Platform Spend Reduction'],
   },
   {
     title: 'Pipeline Reliability Sprint',
