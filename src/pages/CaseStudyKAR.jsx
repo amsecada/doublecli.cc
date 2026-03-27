@@ -50,7 +50,7 @@ export default function CaseStudyKAR() {
       <section className="content-container case-study-template case-study-kar" style={{ paddingTop: '8rem' }}>
         <div className="case-study-title-card case-study-kar-hero">
           <div className="section-kicker"><span className="badge-dot" />Case Study · Enterprise Systems</div>
-          <p className="case-study-eyebrow">Case Study - KAR Auction Services (Anonymized)</p>
+          <p className="case-study-eyebrow">Case Study - Major Auto Dealer (Anonymized)</p>
           <h1 className="section-title">Restoring Trust in Commercial Data After Acquisition</h1>
           <p className="section-text case-study-subheading">
             A case study in Salesforce consolidation, visibility governance, and post-acquisition systems cleanup.
@@ -111,9 +111,8 @@ export default function CaseStudyKAR() {
               <h2>Client Context</h2>
               <p>
                 This engagement took place before 2019, during an acquisition-era integration effort inside a large
-                automotive remarketing enterprise. Public filings from that period show KAR operating across major business
-                segments including ADESA, IAA, and AFC before IAA was separated into an independent public company in June
-                2019.
+                automotive remarketing enterprise. The company operated across multiple business segments with systems shaped
+                by merger activity, overlapping teams, and inherited operational assumptions.
               </p>
               <p className="mt-4">For this case study, the client is anonymized.</p>
               <p>
