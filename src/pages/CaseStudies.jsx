@@ -10,25 +10,25 @@ const caseStudyCards = [
     metrics: ['3 Org → 1 Model', '80%+ Platform Spend Reduction'],
   },
   {
-    title: 'Pipeline Reliability Sprint',
+    title: 'Turning a Fragile DevOps Function Into a Scalable Delivery Engine',
     description:
-      'A systems-first rebuild that removed handoff gaps and restored speed between lead capture and booked call.',
-    href: '/case-studies/template-atlas-home-services',
-    metrics: ['Lead Response -78%', 'No-show -34%'],
+      'A two-year practice transformation that replaced manual release heroics with repeatable deployment systems, auditability, and operational control.',
+    href: '/case-studies/scalable-devops-delivery-engine',
+    metrics: ['$200K → $2M Bookings', '2 Days → Minutes Deployment'],
   },
   {
-    title: 'Sales Ops Stabilization',
+    title: 'Transforming a Patchwork Federal System Into a Measurable User Experience',
     description:
-      'A white-glove implementation focused on process accountability, automation, and cleaner forecasting.',
-    href: '/case-studies/template-atlas-home-services',
-    metrics: ['Forecast Accuracy +49%', 'Admin Hours -16/wk'],
+      'A visibility redesign that measured real user success across mission-critical workflows and turned detection from reactive to proactive.',
+    href: '/case-studies/federal-system-user-experience-visibility',
+    metrics: ['24 Critical Journeys', 'Minutes → Seconds Detection'],
   },
   {
-    title: 'Follow-up Engine Rollout',
+    title: "Enabling Users Like Freakin' Magic Across the Enterprise",
     description:
-      'The engagement that transformed dead leads into a durable reactivation channel with consistent win rates.',
-    href: '/case-studies/template-atlas-home-services',
-    metrics: ['Reactivation +63%', 'Booked Calls +41%'],
+      'A product-adoption system that connected release velocity to user understanding through traceability, automated notes, and version-aware docs.',
+    href: '/case-studies/enterprise-product-adoption-system',
+    metrics: ['75% Fewer User-Error Tickets', '~800 Active Users Supported'],
   },
 ];
 
@@ -41,7 +41,7 @@ export default function CaseStudies() {
         <p className="section-text mt-6 mb-12">
           Explore longform implementation breakdowns that show how systems changes translate into measurable commercial outcomes.
         </p>
-        
+
         <div className="grid-2">
           {caseStudyCards.map((caseStudy) => (
             <Link
